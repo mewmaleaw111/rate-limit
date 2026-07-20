@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 
-from flask_limiter import Limter
+from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
 import hashlib
@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.json.sort_keys = False
 
 limiter = Limiter(
-    key_func=get_romote_address,
+    key_func=get_remote_address,
     app=app,
     default_limits=[],
     storage_uri="memory://",
