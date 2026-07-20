@@ -54,7 +54,6 @@ def home():
 
 
 @app.route("/login-check")
-
 @limiter.limit("5 per second")
 
 def login_check():
